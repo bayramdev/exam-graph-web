@@ -62,6 +62,24 @@ export default {
     middleware: ['auth'],
   },
 
+  auth: {
+    strategies: {
+      local: {
+        token: {
+          property: 'token',
+          global: true,
+        },
+        user: {
+          property: 'user',
+        },
+        endpoints: {
+          login: { url: '/api/login', method: 'post' },
+          user: { url: '/api/me', method: 'get' },
+        },
+      },
+    },
+  },
+
   compilerOptions: {
     types: ['@nuxtjs/auth-next'],
   },
