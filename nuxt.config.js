@@ -81,6 +81,6 @@ export default {
   },
 
   compilerOptions: {
-    types: ['@nuxtjs/auth-next'],
+    types: ['@nuxtjs/auth-next', '@nuxt/types', '@nuxtjs/axios'],
   },
 }
