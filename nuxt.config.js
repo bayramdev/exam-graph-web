@@ -50,7 +50,7 @@ export default {
 
   proxy: {
     '/api/': {
-      target: process.env.EXAM_GRAPH_API_BASE_URL,
+      target: 'https://api.denemegrafik.systems/v1',
       pathRewrite: { '^/api/': '' },
     },
   },
