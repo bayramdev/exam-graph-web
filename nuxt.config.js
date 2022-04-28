@@ -46,12 +46,14 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     proxy: true,
+    credentials: true,
   },
 
   proxy: {
     '/api/': {
-      target: 'https://api.denemegrafik.systems/v1',
+      target: process.env.EXAM_GRAPH_API_BASE_URL,
       pathRewrite: { '^/api/': '' },
+      changeOrigin: true,
     },
   },
 
